@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Tripulante</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/myStyle.css}">
+</head>
+
+<body>
+	<div class="forCont">
+		<img th:src="@{/img/logo.png}" class="forImg">
+		<h3>Gestionar Tripulante</h3>
+		<div style="display:block; margin:auto; width:28%;">
+			<a th:href="@{/addTripulante}"><button type="button" class="btn btn-outline-primary">Agregar Tripulante</button></a>
+		</div>
+		<table class="table table-striped">
+			<thead>
+				<th></th>
+				<th>Identificación</th>
+				<th>Nombres</th>
+				<th>Correo</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

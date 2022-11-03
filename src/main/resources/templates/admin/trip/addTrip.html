@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Adicionar Tripulante</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/myStyle.css}">
+</head>
+
+<body>
+	<div class="forCont">
+		<h3>Adicionar Tripulante</h3>
+		<form name="REG" th:action="@{/insertTrip}" method="post" th:object="${tripulante}">
+			<div class="mb-3">
+				<label for="identificacion" class="form-label">Identificación:</label>
+				<input type="number" class="form-control" name="identificacion" id="identificacion"
+					aria-describedby="desIdentifica" required>
+				<div id="desIdentifica" class="form-text">Digite la identificación sin comas ni puntos.</div>
+			</div>
+			<div class="mb-3">
+				<label for="nombres" class="form-label">Nombres:</label>
+				<input type="text" class="form-control" name="nombres" id="nombres" aria-describedby="desNombres"
+					required>
+				<div id="desNombres" class="form-text">Digite los Nombres del Tripulante.</div>
+			</div>
+			<div class="mb-3">
+				<label for="apellidos" class="form-label">Apellidos:</label>
+				<input type="text" class="form-control" name="apellidos" id="apellidos" aria-describedby="desApe"
+					required>
+				<div id="desApe" class="form-text">Digite los Apellidos del Tripulante.</div>
+			</div>
+			<div class="mb-3">
+				<label for="sexo" class="form-label">Sexo:</label><br>
+				<input type="radio" form-check-input name="sexo" id="sexo" value="1" checked>
+				<label class="form-check-label" for="flexRadioDefault2">
+					Femenino
+				</label>
+				<input type="radio" form-check-input name="sexo" id="sexo" value="2">
+				<label class="form-check-label" for="flexRadioDefault2">
+					Masculino
+				</label>
+				<input type="radio" form-check-input name="sexo" id="sexo" value="3">
+				<label class="form-check-label" for="flexRadioDefault2">
+					Otro
+				</label>
+				<div id="desFecha" class="form-text">Seleccione el sexo del Tripulante</div>
+			</div>
+			<div class="mb-3">
+				<label for="fechaNac" class="form-label">Fecha de Nacimiento:</label>
+				<input type="date" class="form-control" name="fechaNac" id="fechaNac" aria-describedby="desFecha">
+				<div id="desFecha" class="form-text">Seleccione la fecha de Nacimiento</div>
+			</div>
+			<div class="mb-3">
+				<label for="direccion" class="form-label">Dirección:</label>
+				<input type="text" class="form-control" name="direccion" id="direccion" aria-describedby="desDir">
+				<div id="desDir" class="form-text">Digite la dirección de residencia.</div>
+			</div>
+			<div class="mb-3">
+				<label for="telefono" class="form-label">Teléfono:</label>
+				<input type="number" class="form-control" name="telefono" id="telefono" aria-describedby="desTel"
+					required>
+				<div id="desTel" class="form-text">Digite el teléfono de contacto.</div>
+			</div>
+			<div class="mb-3">
+				<label for="correo" class="form-label">Correo:</label>
+				<input type="email" class="form-control" name="correo" id="correo" aria-describedby="desEmail" required>
+				<div id="desEmail" class="form-text">Digite Correo de contacto.</div>
+			</div>
+			<div class="form-floating">
+				<select class="form-select" name="codCurso" id="codCurso" aria-label="Floating label select example">
+					<option selected>Seleccionar Curso</option>
+				</select>
+				<label for="floatingSelect">Seleccione el curso al que se va a Inscribir</label>
+			</div><br>
+			<button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
+	</div>
+</body>
+
+</html>

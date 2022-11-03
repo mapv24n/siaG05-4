@@ -1,0 +1,16 @@
+.forCont{
+	width:40%;
+	margin: 25px auto;
+}
+
+h3{
+	text-align: center;
+	margin: 25px;
+	padding: 25px;
+}
+
+.forImg{
+	display:block;
+	margin:auto;
+	width:200px;
+}
